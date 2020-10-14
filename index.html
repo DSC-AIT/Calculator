@@ -4,11 +4,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
+  <style>
+    #screen{
+      width: 500px;
+      height: 60px;
+      border: 10px solid black;
+      background-color: rgb(80, 163, 2);
+      text-align-last: right;
+      font-size: 30px;
+      color: black;
+    }
+    body{
+      background: linear-gradient(135deg, #667eea, #764ba2);
+
+    }
+    input{
+      color: white;
+      width: 100px;
+      height:100px;
+      background-color: rgb(61, 61, 61);
+      border: 5px solid black;
+      font-size: 20px;
+    }
+    table{
+      margin: auto;
+      border: 3px solid black;
+      background-color: grey;
+      padding: 10px;
+      box-shadow: 0 0 10px black;
+    }
+    h2{
+      text-align: center;
+    }
+    input:hover{
+      background-color: red;
+    }
+  </style>
 </head>
 
 <body>
-  Hello, world!
+  <table>
+    <tr>
+      <td colspan="5">
+        <h2>Calculator</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=5>
+        <input id="screen">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="1" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="2" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="3" onclick="writeit(this)">
+      <td>
+        <input type="button" value="+" onclick="writeit(this)" style="background-color:royalblue">
+      </td>
+      <td rowspan=2>
+        <input type="button" value="C" onclick="clr()" style="background-color: red; height:200px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="4" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="5" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="6" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="-" onclick="writeit(this)" style="background-color:royalblue;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="7" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="8" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="9" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="&#215;" onclick="writeit(this)" style="background-color: royalblue;">
+      </td>
+      <td rowspan=2>
+        <input type="button" value="=" onclick="evaluateit()" style="background-color: green; height:200px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="/" onclick="writeit(this)" style="background-color:royalblue;">
+      </td>
+      <td>
+        <input type="button" value="0" onclick="writeit(this)">
+      </td>
+      <td>
+        <input type="button" value="%" onclick="writeit(this)" style="background-color:royalblue;">
+      </td>
+      <td>
+        <input type="button" value="&#247" onclick="writeit(this)" style="background-color: royalblue;">
+      </td>
+    </tr>
+  </table>
+  <script>
+    var screen = document.getElementById("screen");
+    function writeit(el){
+      var additional = el.value;
+      screen.value = screen.value + additional;
+    }
+    function evaluateit(){
+      screen.value = eval(screen.value);
+    }
+    function clr(){
+      screen.value="";
+    }
+  </script>
 </body>
 
 </html>
