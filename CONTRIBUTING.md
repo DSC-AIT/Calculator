@@ -19,4 +19,6 @@ If you need more details to understand this, feel free to reach out to [@Electro
 
 **-** No explicit content
 
+**-** Never make a PR on the main branch. Such PRs will be marked invalid.
+
 **-** Any images should be optimized for web
