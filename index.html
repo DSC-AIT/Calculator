@@ -96,7 +96,7 @@
         <input type="button" value="9" onclick="writeit(this)">
       </td>
       <td>
-        <input type="button" value="&#215;" onclick="writeit(this)" style="background-color: royalblue;">
+        <input type="button" value="x" onclick="writeit(this)" style="background-color: royalblue;">
       </td>
       <td rowspan=2>
         <input type="button" value="=" onclick="evaluateit()" style="background-color: green; height:200px;">
@@ -113,7 +113,7 @@
         <input type="button" value="%" onclick="writeit(this)" style="background-color:royalblue;">
       </td>
       <td>
-        <input type="button" value="&#247" onclick="writeit(this)" style="background-color: royalblue;">
+        <input type="button" value="&#8678;" onclick="removeOne()" style="background-color: royalblue;">
       </td>
     </tr>
   </table>
@@ -124,7 +124,12 @@
       screen.value = screen.value + additional;
     }
     function evaluateit(){
-      screen.value = eval(screen.value);
+      var result = screen.value;
+      result = result.replace("x","*");
+      screen.value = eval(result);
+    }
+    function removeOne(){
+      screen.value = screen.value.slice(0,-1);
     }
     function clr(){
       screen.value="";
