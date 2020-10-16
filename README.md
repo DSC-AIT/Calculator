@@ -4,7 +4,7 @@
 
 Published at [dsc-ait.github.io/Calculator/](https://dsc-ait.github.io/Calculator/)
 
-This is a website that is supposed to be a simple calculator made using HTML, CSS and Javascript.
+This is a simple calculator made using HTML, CSS and Javascript.
 
 If this is your first time contributing to open-source and you know the basics of HTML, CSS and Javascript then this is the place for you!
 
